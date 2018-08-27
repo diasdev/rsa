@@ -1,6 +1,5 @@
 package com.sdi.rmi.server;
 
-import com.sdi.rmi.interfaces.EchoServer;
 import com.sdi.rmi.interfaces.KeyExchange;
 import com.sdi.rmi.interfaces.ReplicaServer;
 import com.sdi.rmi.interfaces.UpperCase;
@@ -18,8 +17,9 @@ import java.util.Map;
 public class ServerImpl implements KeyExchange, UpperCase {
 
     private List<String> messageList = new ArrayList<>();
-
     private Map<String, String> serverList = new HashMap<>();
+
+    private Boolean clientAuthenticated = false;
 
     public ServerImpl() {}
 
@@ -45,11 +45,14 @@ public class ServerImpl implements KeyExchange, UpperCase {
     }
 
     public String exchangeKeys(String publicKey) {
-
-        return "";
+        clientAuthenticated = true;
+        return "teste-server";
     }
 
-    public String convertToUpperCase(String text) {
+    @Override
+    public String convertToUpperCase(String text) throws RemoteException {
+        if (!clientAuthenticated)
+            throw new RemoteException("não trocou chaves ainda");
 
         return text.toUpperCase();
     }

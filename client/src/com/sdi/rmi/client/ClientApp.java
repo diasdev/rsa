@@ -2,21 +2,19 @@ package com.sdi.rmi.client;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-import java.util.HashMap;
-import java.util.Map;
-
-import com.sdi.rmi.interfaces.EchoServer;
 
 public class ClientApp {
 
     private ClientApp() {
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws RemoteException, NotBoundException {
 
-        String message = (args.length < 1) ? null : args[0];
+        ClientWorker worker = new ClientWorker();
+        worker.execute();
+
+
+        /*String message = (args.length < 1) ? null : args[0];
         String returnedMessage = "";
 
         for(Map.Entry<String, String> entry : getServerList().entrySet()) {
@@ -39,10 +37,10 @@ public class ClientApp {
                 System.err.println("Client exception: " + e.toString());
                 e.printStackTrace();
             }
-        }
+        }*/
     }
 
-    private static String tryAndGetEcho(String message, String destination) throws RemoteException, NotBoundException {
+    /*private static String tryAndGetEcho(String message, String destination) throws RemoteException, NotBoundException {
         Registry registry = LocateRegistry.getRegistry(destination);
         EchoServer serverStub = (EchoServer) registry.lookup("EchoServer");
 
@@ -57,5 +55,5 @@ public class ClientApp {
         serverList.put("Server3", "18.216.164.232");
 
         return serverList;
-    }
+    }*/
 }
