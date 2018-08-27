@@ -29,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientWorker.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientWorker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sdi/rmi/client/ClientWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="459">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeyExchanger.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KeyExchanger.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sdi/rmi/client/KeyExchanger.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -72,8 +72,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/sdi/rmi/client/KeyExchanger.java" />
-        <option value="$PROJECT_DIR$/src/com/sdi/rmi/client/ClientWorker.java" />
         <option value="$PROJECT_DIR$/src/com/sdi/rmi/client/ClientApp.java" />
+        <option value="$PROJECT_DIR$/src/com/sdi/rmi/client/ClientWorker.java" />
       </list>
     </option>
   </component>
@@ -321,16 +321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sdi/rmi/client/ClientWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sdi/rmi/client/KeyExchanger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -338,6 +328,16 @@
           <folding>
             <element signature="e#163#164#0" expanded="true" />
             <element signature="e#194#195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sdi/rmi/client/ClientWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
