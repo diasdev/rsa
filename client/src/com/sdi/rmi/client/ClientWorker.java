@@ -12,7 +12,7 @@ public class ClientWorker {
 
 	public void execute() throws RemoteException, NotBoundException {
 
-		String destination = "192.168.2.62";
+		String destination = "18.216.164.232";
 
 		Registry registry = LocateRegistry.getRegistry(destination);
 
