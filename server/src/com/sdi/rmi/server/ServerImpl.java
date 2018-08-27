@@ -56,49 +56,4 @@ public class ServerImpl implements KeyExchange, UpperCase {
 
         return text.toUpperCase();
     }
-
-    /*@Override
-    public String echo(String message) throws RemoteException {
-        addMessageToHistoricList(message);
-        broadcastMessage(message);
-        return message;
-    }
-
-    @Override
-    public List<String> getListOfMessages(String clientName) throws RemoteException {
-        return this.messageList;
-    }
-
-    @Override
-    public void receiveReplicatedMessage(String message) throws RemoteException {
-        addMessageToHistoricList(message);
-    }*/
-
-    private void addMessageToHistoricList(String message) {
-        this.messageList.add(message);
-    }
-
-    private void broadcastMessage(String message){
-        for(Map.Entry<String, String> entry : serverList.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-
-            replicateMessage(message, value);
-        }
-    }
-
-    private void replicateMessage(String message, String destination) {
-        try {
-            Registry registry = LocateRegistry.getRegistry(destination);
-            ReplicaServer replicaStub = (ReplicaServer) registry.lookup("ReplicaServer");
-            replicaStub.receiveReplicatedMessage(message);
-        }
-        catch (NotBoundException e) {
-            System.out.println(e.getLocalizedMessage());
-        }
-        catch (RemoteException e) {
-            System.out.println(e.getLocalizedMessage());
-        }
-    }
-
 }
