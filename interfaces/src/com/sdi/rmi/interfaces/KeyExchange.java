@@ -2,8 +2,9 @@ package com.sdi.rmi.interfaces;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.security.PublicKey;
 
 public interface KeyExchange extends Remote {
 
-    String exchangeKeys(String publicKey) throws RemoteException;
+    PublicKey exchangeKeys(PublicKey publicKey) throws RemoteException;
 }
